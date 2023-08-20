@@ -1,0 +1,58 @@
+html {
+    width: 90rem;
+    height: 133.563rem;
+    background: url('../assets/background.svg');
+    background-color: #1E1E1E;
+
+}
+
+.introduction {
+    width:90rem;
+    height: 16.875rem;
+    background: url('../assets/fundo.svg');
+}
+
+.introduction > div{
+    width: 59rem;
+    height: 10.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+}
+
+.introduction > div > img:first-child{
+   width: 59rem;
+   margin-left: 4rem;
+}
+
+.introduction > div > img:last-child{
+    width: 35rem;
+    margin-left: 4rem;
+
+}
+
+.body > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+
+.body > div > div{
+    height: 5.188rem;
+    width: 85.75rem;
+    display: flex;
+    justify-content: space-between; 
+    position: absolute;
+}
+
+.body > div > div > button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;   
+}
+

@@ -1,0 +1,14 @@
+.header {
+    background-color:#0066CC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem;
+}
+
+.header > div{
+    width: 11.375rem;
+    height: 2.875rem;
+    display: flex;
+    justify-content: space-between;
+}
