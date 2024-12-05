@@ -10,7 +10,8 @@ import { SignUp } from "./components/SignUp"
 import { AboutUs } from "./components/AboutUs"
 import { Payment } from "./components/Payment"
 import { Footer } from "./components/Footer"
-
+import { CreateMovieSession } from "./components/CreateMovieSession"
+import { CreateMovie } from "./components/CreateMovie"
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Routes>
             <Route path="/LogIn" element={<LogIn/>} />
             <Route path="/SignUp" element={<SignUp/>} />
+            <Route path="/CreateMovie" element={<CreateMovie/>} />
+            <Route path="/CreateMovieSession" element={<CreateMovieSession/>} />
             <Route path="/" element={<Home/>} />
             <Route path="/MovieSession/" element={<MovieSession/>} />
             <Route path="/Checkout/" element={<Checkout/>} />

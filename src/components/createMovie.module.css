@@ -1,0 +1,90 @@
+.createMovie {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.imgCreateMovie {
+    width: 16rem;
+    height: 27rem;
+    border-radius: 0.625rem;
+    object-fit: cover;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+label {
+    color: white;
+    padding-top: 1rem;
+    font-family: 'Poppins';
+    padding-left: 0.2rem;
+    font-size: 1rem;
+}
+
+input {
+    color: black;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
+    background-color: white;
+    padding-left: 0.5rem;
+    font-family: 'Poppins';
+    height: 1.5rem;
+    width: 100%;
+}
+
+.add > button {
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.2rem;
+    font-family: 'Poppins';
+    background-color: #00cc54;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.addInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.addInput > button {
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.2rem;
+    font-family: 'Poppins';
+    background-color: red;
+    height: 1.5rem;
+    width: 6rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
