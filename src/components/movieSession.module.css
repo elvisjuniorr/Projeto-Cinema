@@ -1,0 +1,205 @@
+.mostrar_sessoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to bottom,#00264D, #00264D00);
+}
+
+.banner > div {
+    max-width: 100%;
+    height: auto;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+    display: flex;
+    /* flex-wrap: wrap ; */
+    padding-top: 2.813rem;
+    gap: 2.5rem;
+}
+
+@media (max-width: 850px) {
+    .banner > div{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;       
+    }
+}
+
+.banner > div > img {
+    width: 14.375rem;
+    height: 21.25rem;
+}
+
+
+.banner > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    /* margin-left: 1rem; */
+}
+
+.banner > div > div > div:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.banner > div > div > div:first-child > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    gap: 1rem;
+}
+
+.banner > div > div > div:first-child > div > p:first-of-type{
+    color:#FFFFFF;
+    font-family: 'Roboto';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.idadeMin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-family: 'Roboto';
+    height: 3rem;
+    width: 3rem;
+}
+
+
+.banner > div > div > div:first-child > p:first-of-type{
+    color: #C6C6C6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 1rem;
+
+}
+
+.banner > div > div > div:first-child > p:last-child{
+    width: 100%;
+    color: #F3F3F3; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; 
+    text-align: justify;
+    padding-top: 0.5rem;
+}
+
+/* .banner > div > div > div:first-child > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+.banner > div > div > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.banner > div > div > div:last-child > div > select{
+    display: flex;
+    background-color: #d48c29;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;  
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 0.5rem;
+}
+
+.banner > div > div > div:last-child > div > select > option{
+    color: white;
+    width: 10rem;
+}
+
+.banner > div > div > div:last-child > div > select > option:first-child{
+    color:black;
+    font-weight: bold;
+
+}
+
+.salas {
+    margin-top: 4rem;
+    margin-left: 2.8rem;
+    margin-right: 2.8rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.salas > div:first-child {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button_select {
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #d48c29;
+    background-color: #d48c29;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sections > div {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    max-width: 59.625rem;
+    min-height: 14rem;
+    background-color: #141414;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sections > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sections > div > div > button{
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-style: solid;
+    border-color: #305da8;
+    background-color: transparent;
+    font-family: 'Roboto';
+}
+
+
+

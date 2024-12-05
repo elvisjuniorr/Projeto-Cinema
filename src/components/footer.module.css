@@ -1,0 +1,83 @@
+.footer {
+    display: flex;
+    height: 15rem;
+    background-color: #00264d;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.footer > img:first-of-type {
+    height: 14rem;
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer > div > img{
+    padding-top: 0.5rem;
+    height: 3rem;
+}
+
+.footer > div > div:first-of-type {
+    padding-top: 0.5rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.footer > div > div:first-of-type > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem
+}
+
+.footer > div > div:first-of-type > div > h3 {
+    color: white;
+    font-family: 'Poppins';
+    color: #d48c29;
+}
+
+.footer > div > div:first-of-type > div > a {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 0.7rem;
+}
+
+
+.footer > div > img{
+    max-width: 40rem;
+}
+
+.footer > div > div:last-of-type {
+    display: flex;
+    gap: 0.3rem
+}
+
+.footer > div > div:last-of-type > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.footer > div > div:last-of-type > button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.footer > div > div:last-of-type > button > img{
+    width: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+    .footer > img {
+        display: none;
+    }
+
+    .line {
+        width: 90%;
+    }
+}

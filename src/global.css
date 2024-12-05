@@ -1,5 +1,96 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+
+    /* Paleta de cores */
+
+    --principal-source: #0066cc;
+    --principal-900: #003877; 
+    --principal-800: #004a9b;
+    --principal-500: #4a84ec;
+    --principal-400: #6d98fb;
+    --principal-100: #d2dbff;
+
+    --complementar-source: #0bb0e3;
+    --complementar-900: #00405e;
+    --complementar-800: #00557b;
+    --complementar-500: #0092c3;
+    --complementar-400: #2ba7d4;
+    --complementar-100: #bfe2f5;
+
+    --complementar2-source: #0bd9d3;
+    --complementar2-900: #004442;
+    --complementar2-800: #005a57;
+    --complementar2-500: #009a95;
+    --complementar2-400: #00aea9;
+    --complementar2-100: #b6e6e3;
+
+
+    --sombra-source: #00264d;
+    --sombra-900: #2b3955;
+    --sombra-800: #394b70;
+    --sombra-700: #4a5e89;
+
+    --sombra2-source: #004c99;
+    --sombra2-900: #1a386a;
+    --sombra2-800: #224a8b;
+    --sombra2-700: #305da8;
+
+    --calltoAction-source: #cc8000;
+    --calltoAction-500: #bf7600;
+    --calltoAction-400: #d48c29;
+    --calltoAction-300: #e6a352;
+
+    --cancel-source: #cc2014;
+    --cancel-700: #bb180f;
+    --cancel-600: #d82f1e;
+
+    --confirm-source: #00cc54;
+    --confirm-600: #008912;
+    --confirm400: #03b349;
+
+    --texto-sourse: #001122;
+    --texto-50: #f2f4d7;
+
+    --cinza-preto: #000;
+    --cinza-900: #393939;
+    --cinza-800: #4b4b4b;
+    --cinza-700: #5e5e5e;
+    --cinza-600: #727272;
+    --cinza-500: #868686;
+    --cinza-400: #9b9b9b;
+    --cinza-300: #b0b0b0;
+    --cinza-200: #c6c6c6;
+    --cinza-100: #dddddd;
+    --cinza-50: #f3f3f3;
+    --cinza-branco: #fff;
+    
+    /* fonts */
+
+    --titulo-font: 'Nunito Sans', sans-serif;
+    --subtitulo-font: 'Roboto', sans-serif;
+    --textocolorido-font: 'Roboto', sans-serif;
+    --textofuncional-font: 'Poppins', sans-serif;
+
+    /* Peso da fonte */
+
+    --titulo-peso: 700;
+    --subtitulo-peso: 500;
+    --textocolorido-peso: 400;  
+    --textofuncional-peso: 600;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* body {
+    background-image: url(assets/img/FundoIN.svg);
+    background: linear-gradient(0deg, #2B3955, #2B3955);
+} */
+html, body {
+    height: 100%;
+    width: 100% ;
 }

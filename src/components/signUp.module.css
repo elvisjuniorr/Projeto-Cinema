@@ -1,0 +1,81 @@
+.sign_up0{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 24.938rem;
+    height: 42.875rem;
+    background-color: white;
+    border-radius: 1.5rem;
+}
+
+.sign_up > div{
+    width: 7.875rem;
+    height: 2.438rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+.sign_up > form {
+    display: flex;
+    flex-direction: column;
+    width: 22.438rem;
+}
+
+.sign_up > form > label {
+    padding-top: 1rem;
+    font-family: 'Poppins';
+    padding-left: 0.2rem;
+}
+
+.sign_up > form > input {
+    border-radius: 0.5rem;
+    height: 2.688rem;
+    border: 0.1rem solid black;
+    background-color: transparent;
+    padding-left: 1rem;
+    font-family: 'Poppins';
+}
+
+.sign_up > form > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.sign_up > form > div > p {
+    padding-left: 0.2rem;
+    font-family: 'Poppins';
+}
+
+.sign_up > form > div > p > a{
+    text-decoration: none;
+}
+
+.sign_up > form > button {
+    padding-top: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none; 
+}
+
+.sign_up > p {
+    font-family: 'Poppins';
+    padding-top: 0.5rem;
+}
+
+.sign_up > p > a {
+    text-decoration: none;
+}
