@@ -8,14 +8,15 @@
 
 .formulario {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
 .imgCreateMovie {
-    width: 16rem;
+    width: 18rem;
     height: 27rem;
-    border-radius: 0.625rem;
+    border-radius: 0.5rem;
     object-fit: cover;
 }
 
@@ -33,6 +34,10 @@ label {
     font-size: 1rem;
 }
 
+label:first-of-type {
+    padding-top: 0rem;
+}
+
 input {
     color: black;
     border-radius: 0.2rem;
@@ -44,12 +49,16 @@ input {
     width: 100%;
 }
 
+.inputDescricao {
+    height: 4.5rem;
+}
+
 .add > button {
     font-size: 1rem;
     color: white;
     border-radius: 0.2rem;
     font-family: 'Poppins';
-    background-color: #00cc54;
+    background-color: rgb(80, 230, 90);
     height: 1.5rem;
     width: 1.5rem;
     border: none;
@@ -59,10 +68,15 @@ input {
     cursor: pointer;
 }
 
+.add > button:hover {
+    background-color: rgb(10, 130, 10);
+}
+
 .add {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    padding-top: 1rem;
 }
 
 .addInput {
@@ -78,7 +92,7 @@ input {
     color: white;
     border-radius: 0.2rem;
     font-family: 'Poppins';
-    background-color: red;
+    background-color: rgb(220, 50, 50);
     height: 1.5rem;
     width: 6rem;
     border: none;
@@ -88,3 +102,28 @@ input {
     cursor: pointer;
 }
 
+.addInput > button:hover {
+    background-color: rgb(190, 10, 10);
+}
+
+.buttonSubmite {
+    border-radius: 0.5rem;
+    font-family: 'Poppins';
+    width: 10rem;
+    height: 3rem;
+    font-size: 2rem;
+    background-color: rgb(80, 230, 90);
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.buttonSubmite:hover {
+    background-color: rgb(10, 130, 10);
+}
+
+@media (max-width: 500px) {
+    .campos {
+        width: 20rem;
+    }
+}

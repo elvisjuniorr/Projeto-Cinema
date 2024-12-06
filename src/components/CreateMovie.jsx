@@ -5,14 +5,14 @@ export function CreateMovie (){
     return (
         <div className={styles.createMovie}>
             <form className={styles.formulario}>
-                <img className={styles.imgCreateMovie} src="https://resizing.flixster.com/5bbfOrn5Stku1HxlkK4ISYi2uQk=/206x305/v2/https://resizing.flixster.com/dV1vfa4w_dB4wzk7A_VzThWUWw8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEyZDMyYjZmLThmNzAtNDliNC1hMjFmLTA2ZWY4M2UyMjJhMi5qcGc="/>
+                <img className={styles.imgCreateMovie} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzeGXifVHS1EnTSV7mpFSxMVcLmvCimwRjaEFGjjalLC1Uz3lq16xbZIQCJm6WYKNcmu8&usqp=CAU"/>
                 <section className={styles.campos}>
                     <label>URL Cartaz</label>
                     <input></input>
                     <label>Nome</label>
                     <input></input>
                     <label>Descrição</label>
-                    <input></input>
+                    <input className={styles.inputDescricao}></input>
                     <label>Faixa Etária</label>
                     <input type='number'></input>
                     <label>Diretor(a)</label>
@@ -53,6 +53,7 @@ export function CreateMovie (){
                     <label>Data de Lançamento</label>
                     <input className={styles.inputData} type='date'></input>
                 </section>
+                <button className={styles.buttonSubmite}>CRIAR</button>
             </form>
         </div>
     )
