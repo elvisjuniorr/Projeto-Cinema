@@ -1,5 +1,167 @@
 .createMovieSession {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.searchMovie {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.movie_selection_name {
+    display: flex;
+}
+
+
+.movie_selection_name > input{
+    padding-left: 0.4rem;
+    width: 10rem;
+    height: 2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius:  0.5rem;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.movie_selection_name > button{
+    width: 2.5rem;
+    height: 2rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius:  0.5rem;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.movie_selection_name > button > img{
+    width: 2.5rem;
+    height: 2rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius:  0.5rem;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+}
+
+.movie_selection_name > input::placeholder{
+    color: black;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66rem;
+}
+
+.movie_card_list {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 22rem;
+    height: 7rem;
+    align-items: center;
+    border-color: black;
+    cursor: pointer;
+}
+
+.movie_card_list:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.movie_card_list > img {
+    height: 6rem;
+    object-fit: cover;
+}
+
+.movie_card_list_informations {
+    height: 6rem;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie_card_list_top {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.movie_card_list_top > h4 {
+    width: 8rem;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    text-align: start;
+}
+
+.movie_card_list_bottom > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.movie_card_list_bottom {
+    height: 60%;
+    width: 100%;
+}
+
+.movie_card_list_bottom > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.movie_selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* @media (max-width: 700px) {
+    .movie_selection {
+        flex-direction: column;
+    }
+} */
+
+.movie_selection > div > select {
+    background-color: #d48c29;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;  
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movie_selection > div > select > option {
+    color: white;
+}
+
+.movie_selection > div > select > option:first-of-type {
+    color: black;
+    font-weight: bold;
 }
 
 .movie_card {
@@ -24,9 +186,6 @@
 }
 
 .movie_card:hover {
-    transform: translateY(-1rem);
-    width: 14.575rem;
-    height: 22.825rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.625), 0 1.5rem 1.5rem rgba(0,0,0,0.44);
     transition: transform 0.9s, box-shadow 0.4s;
 }
@@ -124,13 +283,15 @@
 
 .movie_lancamento_true {
     display: flex;
-    width: 10.5195rem;
-    height: 2rem;
+    width: auto;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    height: 1.7rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--textofuncional-font);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: white;
     background-color: forestgreen;
     border-radius: 0.5rem;
@@ -138,34 +299,30 @@
 
 .movie_lancamento_false {
     display: flex;
-    width: 10.5195rem;
-    height: 2rem;
+    width: auto;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--textofuncional-font);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: white;
     background-color: crimson;
     border-radius: 0.5rem;
 }
 
 .movie_lancamento_false > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: var(--textofuncional-font);
     
 }
 
 .movie_lancamento_true > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: var(--textofuncional-font);
     
 }
 
-.movie_card > div > img {
+/* .movie_card > div > img {
     height: 1.24rem;
-}
+} */

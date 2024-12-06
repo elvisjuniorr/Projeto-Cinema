@@ -12,7 +12,7 @@ export function CreateMovie (){
                     <label>Nome</label>
                     <input></input>
                     <label>Descrição</label>
-                    <input className={styles.inputDescricao}></input>
+                    <textarea oninput="autoResize(this)" className={styles.textAreaDescricao}></textarea>
                     <label>Faixa Etária</label>
                     <input type='number'></input>
                     <label>Diretor(a)</label>

@@ -26,7 +26,7 @@
     width: 25rem;
 }
 
-label {
+.createMovie label {
     color: white;
     padding-top: 1rem;
     font-family: 'Poppins';
@@ -34,11 +34,11 @@ label {
     font-size: 1rem;
 }
 
-label:first-of-type {
+.createMovie label:first-of-type {
     padding-top: 0rem;
 }
 
-input {
+.campos  input {
     color: black;
     border-radius: 0.2rem;
     border: 0.1rem solid black;
@@ -47,10 +47,6 @@ input {
     font-family: 'Poppins';
     height: 1.5rem;
     width: 100%;
-}
-
-.inputDescricao {
-    height: 4.5rem;
 }
 
 .add > button {
@@ -126,4 +122,16 @@ input {
     .campos {
         width: 20rem;
     }
+}
+
+.textAreaDescricao {
+    color: black;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
+    background-color: white;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font-family: 'Poppins';
+    width: 100%;
+    min-height: 6rem;
+    resize: none;
 }
