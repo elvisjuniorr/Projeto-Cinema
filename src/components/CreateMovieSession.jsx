@@ -156,6 +156,50 @@ export function CreateMovieSession (){
         }
     }, [estadoSelecionado]); 
 
+    const [bairroSelecionado, setBairroSelecionado] = useState('');
+
+    const handleBairroChange = (event) => {
+        setBairroSelecionado(event.target.value);
+        setCurrentPage(1);
+    };
+
+    const [unidadeSelecionada, setUnidadeSelecionada] = useState('');
+
+    const handleUnidadeChange = (event) => {
+        setUnidadeSelecionada(event.target.value);
+        setCurrentPage(1);
+    };
+
+    const [selectedRooms, setSelectedRooms] = useState([false, false, false]);
+
+    const toggleRoomSelection = (room) => {
+        if (room === '2D'){
+            if (selectedRooms[0] === true && selectedRooms[1] === true && selectedRooms[2] === true){
+                setSelectedRooms ([true, false, false]);
+            } else if (selectedRooms[0] === true && selectedRooms[1] === false && selectedRooms[2] === false){
+                setSelectedRooms ([true, true, true]);
+            } else {
+                setSelectedRooms ([true, false, false]);
+            };  
+        } else if (room === '3D'){
+            if (selectedRooms[0] === true && selectedRooms[1] === true && selectedRooms[2] === true){
+                setSelectedRooms ([false, true, false]);
+            } else if (selectedRooms[0] === false && selectedRooms[1] === true && selectedRooms[2] === false){
+                setSelectedRooms ([true, true, true]);
+            } else {
+                setSelectedRooms ([false, true, false]);
+            };  
+        } else{
+            if (selectedRooms[0] === true && selectedRooms[1] === true && selectedRooms[2] === true){
+                setSelectedRooms ([false, false, true]);
+            } else if (selectedRooms[0] === false && selectedRooms[1] === false && selectedRooms[2] === true){
+                setSelectedRooms ([true, true, true]);
+            }  else {
+                setSelectedRooms ([false, false, true]);
+            };  
+        }
+    };
+
 
     return (
         <div className={styles.createMovieSession}>
@@ -185,7 +229,7 @@ export function CreateMovieSession (){
                 ) : (
                     <section className={styles.setInformations}>
                         <form className={styles.movie_selection}>
-                            <div>
+                            <div className={styles.selectYellowModel}>
                                 <select id="estado" value={estadoSelecionado} onChange={handleEstadoChange}>
                                     <option value="">Estado</option>
                                     {estados.map(estado => (
@@ -193,16 +237,134 @@ export function CreateMovieSession (){
                                     ))}
                                 </select>
                             </div>
-                            {estadoSelecionado && (
-                                <div>
-                                    <select id="cidade" value={cidadeSelecionada} onChange={handleCidadeChange}>
-                                    <option value="">Cidade</option>
-                                    {cidades.map(cidade => (
-                                        <option key={cidade} value={cidade}>{cidade}</option>
-                                    ))}
-                                    </select>
-                                </div>
-                            )}
+                            <div className={styles.selectYellowModel}>
+                                <select id="cidade" value={cidadeSelecionada} onChange={handleCidadeChange}>
+                                <option value="">Cidade</option>
+                                {cidades.map(cidade => (
+                                    <option key={cidade} value={cidade}>{cidade}</option>
+                                ))}
+                                </select>
+                            </div>
+                            <div className={styles.selectYellowModel}>
+                                <select id="bairro" value={bairroSelecionado} onChange={handleBairroChange}>
+                                    <option value="">Bairro</option>
+                                    <option key={filmeEx.bairro} value={filmeEx.bairro}>{filmeEx.bairro}</option>
+                                </select>
+                            </div>
+                            <div className={styles.selectYellowModel}>
+                                <select id="unidade" value={unidadeSelecionada} onChange={handleUnidadeChange}>
+                                <option value="">Unidade</option>
+                                <option key={filmeEx.unidade} value={filmeEx.unidade}>{filmeEx.unidade}</option>
+                                </select>
+                            </div>
+                            <section className={styles.sessionInformations}>
+                                <section className={styles.sessionInformations1}>
+                                    <div className={styles.selectYellowModel}>
+                                        <label>Data da exibição:</label>
+                                        <input  style={{ borderTopLeftRadius: "0rem" }} type='date'></input>
+                                    </div>
+                                    <section className={styles.salas}>
+                                        <div className={styles.modelChoose}>
+                                            <button type="button" onClick={() => toggleRoomSelection('2D')} className={styles.button_select}  style={{backgroundColor: selectedRooms[0] === true ? '#d48c29' : 'transparent'}}>2D</button>
+                                            <button type="button" onClick={() => toggleRoomSelection('3D')} className={styles.button_select} style={{backgroundColor: selectedRooms[1] === true ? '#d48c29' : 'transparent'}}>3D</button>
+                                            <button type="button" onClick={() => toggleRoomSelection('IMAX')} className={styles.button_select} style={{backgroundColor: selectedRooms[2] === true ? '#d48c29' : 'transparent'}}>IMAX</button>
+                                        </div>
+                                        <div className={styles.sections}>
+                                        {selectedRooms[0] && (
+                                            <div>
+                                                <section>
+                                                    <button type="button" className={styles.button_select}>2D</button>
+                                                    <button type="button" className={styles.button_select_add}>+</button>
+                                                </section>
+                                                <div>
+                                                    <input className={styles.inputTime} type="time"></input>
+                                                    <>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                    </>
+                                                </div>
+                                                <div className={styles.selectYellowModel}>
+                                                    <select id="formato" >
+                                                    <option value="">Formato</option>
+                                                    <option >Dublado</option>
+                                                    <option >Legendado</option>
+                                                    <option >Dublado & Legendado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {selectedRooms[1] && (
+                                            <div>
+                                                <section>
+                                                    <button type="button" className={styles.button_select}>3D</button>
+                                                    <button type="button" className={styles.button_select_add}>+</button>
+                                                </section>
+                                                <div>
+                                                    <input className={styles.inputTime}type="time"></input>
+                                                    <>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                    </>
+                                                </div>
+                                                <div className={styles.selectYellowModel}>
+                                                    <select id="formato" >
+                                                    <option value="">Formato</option>
+                                                    <option >Dublado</option>
+                                                    <option >Legendado</option>
+                                                    <option >Dublado & Legendado</option>
+                                                    </select>
+                                                </div>
+                                            </div>                   
+                                        )}
+                                        {selectedRooms[2] && (
+                                            <div>
+                                                <section>
+                                                    <button type="button" className={styles.button_select}>IMAX</button>
+                                                    <button type="button" className={styles.button_select_add}>+</button>
+                                                </section>
+                                                <div>
+                                                    <section>
+                                                        <section>
+                                                            <input className={styles.inputTime}type="time"></input>
+                                                            <select className={styles.inputTime} id="formato" >
+                                                                <option value="">Formato</option>
+                                                                <option >Dublado</option>
+                                                                <option >Legendado</option>
+                                                                <option >Dublado & Legendado</option>
+                                                            </select>
+                                                        </section>
+                                                        <section className={styles.selectYellowModel} >
+                                                            <select id="formato" >
+                                                            <option value="">Formato</option>
+                                                            <option >Dublado</option>
+                                                            <option >Legendado</option>
+                                                            <option >Dublado & Legendado</option>
+                                                            </select>
+                                                        </section>
+                                                    </section>
+                                                    <>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                        <input className={styles.inputTime} type="time"></input>
+                                                    </>
+                                                </div>
+                                                <div className={styles.selectYellowModel}>
+                                                    <select id="formato" >
+                                                    <option value="">Formato</option>
+                                                    <option >Dublado</option>
+                                                    <option >Legendado</option>
+                                                    <option >Dublado & Legendado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        )}
+                                        </div>
+                                        <button type="button" className={styles.button_select_add}  style={{backgroundColor: "transparent", color: "#305da8"}}>+</button>
+                                    </section>
+                                </section>
+                            </section>
                         </form>
                         <section>
                             <button key={filmeEx.id} className={styles.movie_card} onClick={() => handleSelectButtonClick(filmeEx.id)}>                   

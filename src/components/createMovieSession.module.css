@@ -132,37 +132,166 @@
     text-align: justify;
 }
 
-.movie_selection{
+.setInformations {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    align-items: start;
+    width: 100%;
 }
 
-/* @media (max-width: 700px) {
-    .movie_selection {
-        flex-direction: column;
-    }
-} */
+.movie_selection{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
 
-.movie_selection > div > select {
+.selectYellowModel > select {
+    width: 30rem;
     background-color: #d48c29;
-    width: 8rem;
     height: 2rem;
     border-radius: 0.5rem;  
     font-weight: bold;
     cursor: pointer;
 }
 
-.movie_selection > div > select > option {
+.selectYellowModel > label {
+    display: flex;
+    font-weight: bold;
+    background-color: #d48c29;
+    height: 1.2rem;
+    border-radius: 0.5rem; 
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    width: fit-content;
+    padding-right: 0.5rem;
+    
+}
+
+.selectYellowModel > input {
+    width: 30rem;
+    background-color: #d48c29;
+    height: 2rem;
+    border-radius: 0.5rem;  
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.selectYellowModel > select > option {
     color: white;
 }
 
-.movie_selection > div > select > option:first-of-type {
+.selectYellowModel > select > option:first-of-type {
     color: black;
     font-weight: bold;
 }
+
+.sessionInformations {
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    border:#305da8 solid 0.1rem
+}
+
+.sessionInformations1 {
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border:#305da8 solid 0.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;;
+}
+
+
+
+.salas {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modelChoose {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.button_select {
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #d48c29;
+    background-color: #d48c29;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sections > div {
+    padding: 1rem 1rem 1rem 1rem;
+    height: auto;
+    background-color: #141414;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sections > div > section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sections > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.inputTime{
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-style: solid;
+    border-color: #305da8;
+    background-color: transparent;
+    font-family: 'Roboto';
+}
+
+.button_select_add {
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #305da8;
+    background-color: #305da8;
+    font-size: 2rem;
+}
+
+
+
 
 .movie_card {
     width: 13.25rem;
