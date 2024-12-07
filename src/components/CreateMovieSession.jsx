@@ -203,7 +203,7 @@ export function CreateMovieSession (){
 
     return (
         <div className={styles.createMovieSession}>
-                { selectedMovie != null ? (
+                { selectedMovie == null ? (
                     <form className={styles.searchMovie}>
                         <section className={styles.movie_selection_name}>
                                 <input id="titulo" placeholder='Digite o nome do Filme'></input>
@@ -262,109 +262,258 @@ export function CreateMovieSession (){
                                     <div className={styles.selectYellowModel}>
                                         <label>Data da exibição:</label>
                                         <input  style={{ borderTopLeftRadius: "0rem" }} type='date'></input>
+                                    </div>                                 
+                                    <div className={styles.modelChoose}>
+                                        <button type="button" onClick={() => toggleRoomSelection('2D')} className={styles.button_select}  style={{backgroundColor: selectedRooms[0] === true ? '#d48c29' : 'transparent'}}>2D</button>
+                                        <button type="button" onClick={() => toggleRoomSelection('3D')} className={styles.button_select} style={{backgroundColor: selectedRooms[1] === true ? '#d48c29' : 'transparent'}}>3D</button>
+                                        <button type="button" onClick={() => toggleRoomSelection('IMAX')} className={styles.button_select} style={{backgroundColor: selectedRooms[2] === true ? '#d48c29' : 'transparent'}}>IMAX</button>
                                     </div>
-                                    <section className={styles.salas}>
-                                        <div className={styles.modelChoose}>
-                                            <button type="button" onClick={() => toggleRoomSelection('2D')} className={styles.button_select}  style={{backgroundColor: selectedRooms[0] === true ? '#d48c29' : 'transparent'}}>2D</button>
-                                            <button type="button" onClick={() => toggleRoomSelection('3D')} className={styles.button_select} style={{backgroundColor: selectedRooms[1] === true ? '#d48c29' : 'transparent'}}>3D</button>
-                                            <button type="button" onClick={() => toggleRoomSelection('IMAX')} className={styles.button_select} style={{backgroundColor: selectedRooms[2] === true ? '#d48c29' : 'transparent'}}>IMAX</button>
-                                        </div>
-                                        <div className={styles.sections}>
-                                        {selectedRooms[0] && (
-                                            <div>
-                                                <section>
-                                                    <button type="button" className={styles.button_select}>2D</button>
-                                                    <button type="button" className={styles.button_select_add}>+</button>
-                                                </section>
-                                                <div>
-                                                    <input className={styles.inputTime} type="time"></input>
-                                                    <>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                    </>
-                                                </div>
-                                                <div className={styles.selectYellowModel}>
-                                                    <select id="formato" >
-                                                    <option value="">Formato</option>
-                                                    <option >Dublado</option>
-                                                    <option >Legendado</option>
-                                                    <option >Dublado & Legendado</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        )}
-                                        {selectedRooms[1] && (
-                                            <div>
-                                                <section>
-                                                    <button type="button" className={styles.button_select}>3D</button>
-                                                    <button type="button" className={styles.button_select_add}>+</button>
-                                                </section>
-                                                <div>
-                                                    <input className={styles.inputTime}type="time"></input>
-                                                    <>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                    </>
-                                                </div>
-                                                <div className={styles.selectYellowModel}>
-                                                    <select id="formato" >
-                                                    <option value="">Formato</option>
-                                                    <option >Dublado</option>
-                                                    <option >Legendado</option>
-                                                    <option >Dublado & Legendado</option>
-                                                    </select>
-                                                </div>
-                                            </div>                   
-                                        )}
-                                        {selectedRooms[2] && (
-                                            <div>
-                                                <section>
-                                                    <button type="button" className={styles.button_select}>IMAX</button>
-                                                    <button type="button" className={styles.button_select_add}>+</button>
-                                                </section>
-                                                <div>
-                                                    <section>
-                                                        <section>
-                                                            <input className={styles.inputTime}type="time"></input>
-                                                            <select className={styles.inputTime} id="formato" >
-                                                                <option value="">Formato</option>
-                                                                <option >Dublado</option>
-                                                                <option >Legendado</option>
-                                                                <option >Dublado & Legendado</option>
-                                                            </select>
-                                                        </section>
-                                                        <section className={styles.selectYellowModel} >
-                                                            <select id="formato" >
-                                                            <option value="">Formato</option>
-                                                            <option >Dublado</option>
-                                                            <option >Legendado</option>
-                                                            <option >Dublado & Legendado</option>
-                                                            </select>
-                                                        </section>
+                                    <div className={styles.sections}>
+                                    {selectedRooms[0] && (
+                                        <div>
+                                            <section>
+                                                <button type="button" className={styles.button_select}>2D</button>
+                                                <button type="button" className={styles.button_select_add}>+</button>
+                                            </section>
+                                            <div className={styles.timeRoomFormatFrame}>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
                                                     </section>
-                                                    <>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                        <input className={styles.inputTime} type="time"></input>
-                                                    </>
-                                                </div>
-                                                <div className={styles.selectYellowModel}>
-                                                    <select id="formato" >
-                                                    <option value="">Formato</option>
-                                                    <option >Dublado</option>
-                                                    <option >Legendado</option>
-                                                    <option >Dublado & Legendado</option>
-                                                    </select>
-                                                </div>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <>
+                                                    {/* <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input> */}
+                                                </>
                                             </div>
-                                        )}
+                                            {/* <div className={styles.selectYellowModel}>
+                                                <select id="formato" >
+                                                <option value="">Formato</option>
+                                                <option >Dublado</option>
+                                                <option >Legendado</option>
+                                                <option >Dublado & Legendado</option>
+                                                </select>
+                                            </div> */}
                                         </div>
-                                        <button type="button" className={styles.button_select_add}  style={{backgroundColor: "transparent", color: "#305da8"}}>+</button>
-                                    </section>
+                                    )}
+                                    {selectedRooms[1] && (
+                                        <div>
+                                            <section>
+                                                <button type="button" className={styles.button_select}>3D</button>
+                                                <button type="button" className={styles.button_select_add}>+</button>
+                                            </section>
+                                            <div className={styles.timeRoomFormatFrame}>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <>
+                                                    {/* <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input> */}
+                                                </>
+                                            </div>
+                                            {/* <div className={styles.selectYellowModel}>
+                                                <select id="formato" >
+                                                <option value="">Formato</option>
+                                                <option >Dublado</option>
+                                                <option >Legendado</option>
+                                                <option >Dublado & Legendado</option>
+                                                </select>
+                                            </div> */}
+                                        </div>                   
+                                    )}
+                                    {selectedRooms[2] && (
+                                        <div>
+                                            <section>
+                                                <button type="button" className={styles.button_select}>IMAX</button>
+                                                <button type="button" className={styles.button_select_add}>+</button>
+                                            </section>
+                                            <div className={styles.timeRoomFormatFrame}>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <section className={styles.timeRoomFormat}>
+                                                    <section className={styles.timeRoom} >
+                                                        <input className={styles.inputTime}type="time"></input>
+                                                        <select className={styles.inputTime} id="sala" >
+                                                            <option value="">Sala</option>
+                                                            <option >Sala 1</option>
+                                                            <option >Sala 2</option>
+                                                            <option >Sala 3</option>
+                                                        </select>
+                                                    </section>
+                                                    <section className={styles.selectYellowModel}>
+                                                        <select id="formato" style={{width: '12rem'}}>
+                                                        <option value="">Formato</option>
+                                                        <option >Dublado</option>
+                                                        <option >Legendado</option>
+                                                        <option >Dublado & Legendado</option>
+                                                        </select>
+                                                    </section>
+                                                </section>
+                                                <>
+                                                    {/* <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input>
+                                                    <input className={styles.inputTime} type="time"></input> */}
+                                                </>
+                                            </div>
+                                            {/* <div className={styles.selectYellowModel}>
+                                                <select id="formato" >
+                                                <option value="">Formato</option>
+                                                <option >Dublado</option>
+                                                <option >Legendado</option>
+                                                <option >Dublado & Legendado</option>
+                                                </select>
+                                            </div> */}
+                                        </div>
+                                    )}
+                                    </div>
+                                    <button type="button" className={styles.button_select_add_session}>+</button>
                                 </section>
                             </section>
+                            <button  className={styles.button_select_add_movie_session}>CRIAR</button>
                         </form>
                         <section>
                             <button key={filmeEx.id} className={styles.movie_card} onClick={() => handleSelectButtonClick(filmeEx.id)}>                   

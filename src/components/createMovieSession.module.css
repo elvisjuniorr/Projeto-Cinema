@@ -193,7 +193,7 @@
 .sessionInformations {
     height: auto;
     border-radius: 0.5rem;
-    padding: 0.2rem;
+    padding: 0.1rem;
     border:#305da8 solid 0.1rem
 }
 
@@ -204,16 +204,8 @@
     border:#305da8 solid 0.1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;;
-}
-
-
-
-.salas {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
 .modelChoose {
@@ -256,10 +248,26 @@
     justify-content: space-between;
 }
 
-.sections > div > div {
+.timeRoomFormatFrame {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0.5rem;
+}
+
+.timeRoomFormat {
+    height: auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border:#d48c29 solid 0.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeRoom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .inputTime{
@@ -289,6 +297,32 @@
     background-color: #305da8;
     font-size: 2rem;
 }
+
+.button_select_add:hover {
+    border-color: #1148a8;
+    background-color: #1148a8;
+}
+
+.button_select_add_session {
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #305da8;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+}
+
+.button_select_add_session:hover {
+    border-color: #1148a8;
+    background-color: #1148a8;
+}
+
+
 
 
 
@@ -455,3 +489,18 @@
 /* .movie_card > div > img {
     height: 1.24rem;
 } */
+
+
+.button_select_add_movie_session {
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #d48c29;
+    background-color: #d48c29;
+    color: white;
+    font-size: 1rem;
+}
