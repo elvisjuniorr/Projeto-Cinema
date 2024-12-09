@@ -1,0 +1,162 @@
+.profile{
+    display: flex;
+    padding-top: 7rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.profile_widgets {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_widgets > button {
+    /* background-color: #d48c29; */
+    background-color: #0066CC;
+    padding: 0.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.profile_widgets > button:hover {
+    background-color: #00264d;
+
+}
+
+.profile_widgets > button:first-of-type {
+    border-top-left-radius: 0.5rem;
+}
+
+.profile_widgets > button:last-of-type {
+    border-bottom-left-radius: 0.5rem;
+}
+
+.profile_widgets > button > img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.profile_widgets > button > img {
+    stroke: white;
+}
+
+
+.profile_user {   
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: auto;
+    background-color: white;
+    border-radius: 1.5rem;
+    border-top-left-radius: 0rem;
+    padding-top: 5rem;
+}
+
+/* .sign_up > div{  
+    width: 7.875rem;
+    height: 2.438rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Poppins';
+} */
+
+.profile_user > form {   
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+}
+
+.profile_user > form > label {
+    padding-top: 1rem;
+    font-family: 'Poppins';
+    padding-left: 0.2rem;
+} 
+
+.input_foto {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.input_foto > label {
+    position: absolute;
+    border-radius: 5rem;
+    height: 10rem;
+    width: 10rem;
+    border: 0.1rem solid black;
+    box-sizing:content-box;
+    justify-content: center;
+    cursor: pointer;
+    top: -5rem;
+}
+
+.input_foto > label > img {
+    border-radius: 5rem;
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+}
+
+.input_foto > input {
+    display: none;
+}
+
+.profile_user > form > input {
+    border-radius: 0.5rem;
+    height: 2.688rem;
+    border: 0.1rem solid black;
+    background-color: transparent;
+    padding-left: 1rem;
+    font-family: 'Poppins';
+}
+
+.profile_user > form > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.profile_user > form > div > p {
+    padding-left: 0.2rem;
+    font-family: 'Poppins';
+}
+
+.profile_user > form > div > p > a{
+    text-decoration: none;
+}
+
+.profile_user > form > button {
+    padding-top: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: none; 
+}
+
+.profile_user > p {
+    font-family: 'Poppins';
+    padding-top: 0.5rem;
+}
+
+.profile_user > p > a {
+    text-decoration: none;
+}
+
+.profile_ticket {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: auto;
+    background-color: white;
+    border-radius: 1.5rem;
+    border-top-left-radius: 0rem;
+    padding-top: 5rem;
+}

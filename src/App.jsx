@@ -7,6 +7,7 @@ import { Checkout } from "./components/Checkout"
 // import { ApplicationContextProvider } from "./contexts/ApplicationContextProvider"
 import { LogIn } from "./components/LogIn"
 import { SignUp } from "./components/SignUp"
+import { Profile } from "./components/Profile"
 import { AboutUs } from "./components/AboutUs"
 import { Payment } from "./components/Payment"
 import { Footer } from "./components/Footer"
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/LogIn" element={<LogIn/>} />
             <Route path="/SignUp" element={<SignUp/>} />
+            <Route path="/Profile" element={<Profile/>} />
             <Route path="/CreateMovie" element={<CreateMovie/>} />
             <Route path="/CreateMovieSession" element={<CreateMovieSession/>} />
             <Route path="/" element={<Home/>} />

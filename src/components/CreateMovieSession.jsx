@@ -279,7 +279,7 @@ export function CreateMovieSession (){
                                                 <section className={styles.timeRoomFormat}>
                                                     <section className={styles.timeRoom} >
                                                         <input className={styles.inputTime}type="time"></input>
-                                                        <select className={styles.inputTime} id="sala" >
+                                                        <select className={styles.selectRoom} id="sala" >
                                                             <option value="">Sala</option>
                                                             <option >Sala 1</option>
                                                             <option >Sala 2</option>
@@ -298,7 +298,7 @@ export function CreateMovieSession (){
                                                 <section className={styles.timeRoomFormat}>
                                                     <section className={styles.timeRoom} >
                                                         <input className={styles.inputTime}type="time"></input>
-                                                        <select className={styles.inputTime} id="sala" >
+                                                        <select className={styles.selectRoom} id="sala" >
                                                             <option value="">Sala</option>
                                                             <option >Sala 1</option>
                                                             <option >Sala 2</option>
@@ -317,7 +317,7 @@ export function CreateMovieSession (){
                                                 <section className={styles.timeRoomFormat}>
                                                     <section className={styles.timeRoom} >
                                                         <input className={styles.inputTime}type="time"></input>
-                                                        <select className={styles.inputTime} id="sala" >
+                                                        <select className={styles.selectRoom} id="sala" >
                                                             <option value="">Sala</option>
                                                             <option >Sala 1</option>
                                                             <option >Sala 2</option>

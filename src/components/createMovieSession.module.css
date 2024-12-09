@@ -152,6 +152,7 @@
 .selectYellowModel > select {
     width: 30rem;
     background-color: #d48c29;
+    border-color: #d48c29;
     height: 2rem;
     border-radius: 0.5rem;  
     font-weight: bold;
@@ -162,12 +163,13 @@
     display: flex;
     font-weight: bold;
     background-color: #d48c29;
-    height: 1.2rem;
+    height: 1.5rem;
     border-radius: 0.5rem; 
     border-bottom-left-radius: 0rem;
     border-bottom-right-radius: 0rem;
     width: fit-content;
     padding-right: 0.5rem;
+    align-items: center;
     
 }
 
@@ -322,7 +324,36 @@
     background-color: #1148a8;
 }
 
+.selectRoom{
+    border: none;
+    cursor: pointer;
+    height: 2.5rem;  
+    width: 5.5rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-style: solid;
+    border-color: #305da8;
+    background-color: transparent;
+    font-family: 'Roboto';
+}
 
+.selectRoom > option {
+    border: none;
+    background-color: #305da8;
+    height: 2rem;
+    border-radius: 0.5rem;  
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+
+
+.selectRoom > option:first-of-type {
+    color: black;
+    font-weight: bold;
+}
 
 
 
