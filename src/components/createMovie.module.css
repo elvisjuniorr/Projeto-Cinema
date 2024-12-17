@@ -13,11 +13,13 @@
     align-items: center;
 }
 
-.imgCreateMovie {
+.buttonCreateMovie {
     width: 18rem;
     height: 27rem;
     border-radius: 0.5rem;
-    object-fit: cover;
+    border:#305da8 solid 0.2rem; 
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .campos {

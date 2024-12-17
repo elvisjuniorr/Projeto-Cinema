@@ -1,11 +1,12 @@
 import styles from './createMovie.module.css'
+import { HiCloudArrowUp } from "react-icons/hi2";
 
 export function CreateMovie (){
     
     return (
         <div className={styles.createMovie}>
             <form className={styles.formulario}>
-                <img className={styles.imgCreateMovie} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzeGXifVHS1EnTSV7mpFSxMVcLmvCimwRjaEFGjjalLC1Uz3lq16xbZIQCJm6WYKNcmu8&usqp=CAU"/>
+                <button className={styles.buttonCreateMovie}><HiCloudArrowUp style={{fontSize: "13rem", color: "#305da8"}}/></button>
                 <section className={styles.campos}>
                     <label>URL Cartaz</label>
                     <input></input>
