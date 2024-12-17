@@ -250,9 +250,9 @@ export function Profile (){
                 <section className={styles.profile_receipts}>
                     <h2>Histórico</h2>
                     <section className={styles.receipts}>
+                        <p type="data">20/04/2003</p>
                         <section className={styles.receipt}>
-                            <p type="data">20/04/2003</p>
-                            <section className={styles.receipt_informations}>
+                            <button className={styles.receipt_informations}>
                                 <img src={filme.poster}/>
                                 <section>
                                     <h4>{filme.titulo}</h4>
@@ -260,12 +260,61 @@ export function Profile (){
                                         <p><LuClock4 style={{fontSize: "1rem" }}/>{filme.hours}h{filme.minutes}min</p>
                                         <p><LuCalendarDays style={{fontSize: "1rem" }}/>{filme.data}</p>
                                     </section>
-                                    <p><TfiLocationPin style={{fontSize: "1rem" }}/>{filme.unidade}, {filme.bairro} vdfvdfvdfv</p>
+                                    <section>
+                                        <TfiLocationPin style={{fontSize: "1rem" }}/>
+                                        <p>{filme.unidade}, {filme.bairro} - {filme.cidade} ({filme.estado})</p>
+                                    </section>
                                 </section>
-                            </section>
+                            </button>
+                            <button className={styles.receipt_informations}>
+                                <img src={filme.poster}/>
+                                <section>
+                                    <h4>{filme.titulo}</h4>
+                                    <section>
+                                        <p><LuClock4 style={{fontSize: "1rem" }}/>{filme.hours}h{filme.minutes}min</p>
+                                        <p><LuCalendarDays style={{fontSize: "1rem" }}/>{filme.data}</p>
+                                    </section>
+                                    <section>
+                                        <TfiLocationPin style={{fontSize: "1rem" }}/>
+                                        <p>{filme.unidade}, {filme.bairro} - {filme.cidade} ({filme.estado})</p>
+                                    </section>
+                                </section>
+                            </button>
+                            <button className={styles.receipt_informations}>
+                                <img src={filme.poster}/>
+                                <section>
+                                    <h4>{filme.titulo}</h4>
+                                    <section>
+                                        <p><LuClock4 style={{fontSize: "1rem" }}/>{filme.hours}h{filme.minutes}min</p>
+                                        <p><LuCalendarDays style={{fontSize: "1rem" }}/>{filme.data}</p>
+                                    </section>
+                                    <section>
+                                        <TfiLocationPin style={{fontSize: "1rem" }}/>
+                                        <p>{filme.unidade}, {filme.bairro} - {filme.cidade} ({filme.estado})</p>
+                                    </section>
+                                </section>
+                            </button>
+                            <button className={styles.receipt_informations}>
+                                <img src={filme.poster}/>
+                                <section>
+                                    <h4>{filme.titulo}</h4>
+                                    <section>
+                                        <p><LuClock4 style={{fontSize: "1rem" }}/>{filme.hours}h{filme.minutes}min</p>
+                                        <p><LuCalendarDays style={{fontSize: "1rem" }}/>{filme.data}</p>
+                                    </section>
+                                    <section>
+                                        <TfiLocationPin style={{fontSize: "1rem" }}/>
+                                        <p>{filme.unidade}, {filme.bairro} - {filme.cidade} ({filme.estado})</p>
+                                    </section>
+                                </section>
+                            </button>
                         </section>
-                    </section>""
+                    </section>
                 </section> 
+                <section className={styles.profile_wallet}>
+                    <h2>Histórico</h2>
+                    
+                </section>
             </section>         
         </section>
     )

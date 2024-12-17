@@ -38,6 +38,7 @@
     display: flex;
     max-width: 40rem;
     width: 100%;
+    min-height: 25rem;
     height: auto;
     background-color: white;
     border-radius: 1.5rem;
@@ -359,18 +360,58 @@
     font-size: 6rem;
 }
 
+.profile_receipts {
+    display: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    font-family: "poppins";
+}
+
+.receipts {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.receipts > p {
+    color: #d48c29;
+    width: 100%;
+    border-bottom: #d48c29 solid 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.receipt {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
 
 .receipt_informations {
+    display: flex;
     width: 18rem;
     height: 6rem;
     background-color: #00264d;
     display: flex;
     border-radius: 0.5rem;
+    border: none;
+    text-align: start;
+    font-family: "poppins";
+    cursor: pointer;
+} 
+
+.receipt_informations:hover {
+    background-color: #0066CC;
 }
 
 .receipt_informations > img {
     height: 6rem;
     object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 .receipt_informations > section {
@@ -381,26 +422,42 @@
     width: 100%;
 }
 
-.receipt_informations  h4 {
+.receipt_informations > section > h4 {
     color: white;
     font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.receipt_informations > section > section {
+.receipt_informations > section > section:first-of-type {
     display: flex;
     justify-content: space-between;
 }
 
-.receipt_informations  p {
+.receipt_informations > section > section:first-of-type > p {
     display: flex;
     color: white;
     align-items: center;
     font-size: 0.8rem;
     text-align: justify;
+    width: auto;
 }
 
-.receipt_informations  p:last-of-type {
+.receipt_informations > section > section:last-of-type {
+    display: flex;
+    color: white;
+    align-items: top;
+}
+
+
+.receipt_informations > section > section:last-of-type > p {
+    text-align: justify;
+    align-items: center;
     width: 100%;
+    font-size: 0.8rem;
     display: -webkit-box;
     -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
