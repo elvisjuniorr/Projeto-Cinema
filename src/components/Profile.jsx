@@ -26,6 +26,8 @@ import ModalCard from './ModalCard';
 
 export function Profile (){
 
+    const cinema = String.raw`C{IN}EMA`;
+
     const filme = {
             id: 1,
             titulo: 'Barbie',
@@ -373,6 +375,99 @@ export function Profile (){
                             <p>tel (Demais Regiões): <span>(21) 94433-2211</span></p>
                         </section>
                     </section>
+                </section>
+                <section className={styles.profile_terms_of_use}>
+                    <h3>Termos e Condições</h3>
+                    <div className={styles.terms_of_use}>
+                        <p>Ao acessar esta página, você reconhece ter lido e entendido seu conteúdo e declara estar de acordo com o mesmo.</p>
+
+                        <p>O conteúdo desta página, assim como suas atualizações, é de propriedade exclusiva de {cinema}, e se encontra protegido pelas leis da República Federativa do Brasil, bem como pelo Direito Internacional.</p>
+
+                        <p>O conteúdo deste site deve ser utilizado apenas como um recurso de publicidade, informação e compra de bens e serviços comercializados por {cinema} ou suas empresas subsidiárias, afiliadas ou associadas.</p>
+
+                        <p>É estritamente proibido qualquer tipo de uso, incluindo publicitário, reprodução, exibição, execução ou comercialização do conteúdo deste website, incluindo marcas ou avisos comerciais, em qualquer rede de computadores, página da Internet ou mídia diversa, sem o prévio consentimento por escrito de {cinema}.</p>
+
+                        <p>A marca {cinema}, em suas diferentes classes e tipos, encontra-se devidamente registrada e seu uso total ou parcial é estritamente proibido.</p>
+
+                        <p>Todas as marcas mencionadas neste site, seu conteúdo, incluindo gráficos, fotografias, textos, informações e os programas associados de computador, são direitos reservados de {cinema} ou a ela cedidos contratualmente.</p>
+
+                        <p>A informação contida neste website é apenas enunciativa, não constituindo, de nenhuma forma, uma oferta vinculante que obrigue o usuário e {cinema} a celebrar qualquer tipo de contrato.</p>
+
+                        <p>{cinema} declara o seguinte:</p>
+                        <ul>
+                            <li>Todos os contratantes de eventos na sala precisam assinar, assim como clientes de sessões normais da programação.</li>
+                            <li>Se reserva o direito de modificar as informações aqui contidas quando julgar conveniente e sem aviso prévio, podendo, inclusive, limitar ou não permitir o acesso à referida informação.</li>
+                            <li>Não se responsabiliza por danos ou prejuízos causados em virtude do acesso ou má utilização dos conteúdos deste site.</li>
+                            <li>Não se responsabiliza pelas possíveis discrepâncias entre a versão de seus documentos impressos e a versão eletrônica dos mesmos publicados neste site.</li>
+                            <li>Não assume qualquer responsabilidade decorrente da troca de informações eletrônicas entre os usuários da rede de Internet, nem por problemas técnicos que possam ocorrer nos equipamentos utilizados durante a conexão.</li>
+                        </ul>
+
+                        <p>As transações realizadas através do portal de {cinema} e suas empresas subsidiárias ou afiliadas serão regidas pelos termos e condições estabelecidos pelo Código Civil Brasileiro, pelo Código de Defesa do Consumidor e demais legislações específicas, quando aplicável.</p>
+
+                        <p>{cinema} elege o foro da cidade de São Paulo, Estado de São Paulo, para dirimir qualquer controvérsia decorrente da aplicação das referidas leis, renunciando expressamente a qualquer outra jurisdição, por mais privilegiada que seja.</p>
+
+                        <p><strong>Política de Segurança de Dados Pessoais</strong></p>
+
+                        <p>Os dados pessoais dos clientes contidos neste site são utilizados exclusivamente para identificação em operações de compra e não são compartilhados com terceiros, exceto em casos de solicitação judicial.</p>
+
+                        <p><strong>Políticas de Privacidade e Segurança</strong></p>
+
+                        <p>{cinema} se compromete a garantir a confidencialidade e privacidade das informações pessoais obtidas através de seus serviços online. Sugerimos que você leia as normas descritas a seguir para entender como sua informação pessoal será tratada.</p>
+
+                        <p>Estas normas de confidencialidade estão sujeitas a alterações, portanto, recomendamos que sejam revistas periodicamente.</p>
+
+                        <p><strong>1 - Tipo de informação pessoal obtida:</strong></p>
+
+                        <p>As informações pessoais inseridas voluntariamente em nosso site estão sujeitas às normas de confidencialidade e privacidade, incluindo dados referentes à criação de perfil, inscrição em notificações de ofertas especiais, registros em programas de fidelidade e participação em concursos, sorteios e pesquisas online.</p>
+
+                        <p>Os dados coletados variam conforme o programa e são armazenados separadamente para garantir maior segurança.</p>
+
+                        <p><strong>Contato online:</strong> as informações solicitadas nesta seção permitem que {cinema} entre em contato com os clientes quando necessário, incluindo nome, e-mail, telefone e empresa em que trabalha.</p>
+
+                        <p><strong>Programa de notificação de ofertas:</strong> os visitantes podem fornecer informações como nome, e-mail, endereço, país e preferências. Esses dados podem ser modificados a qualquer momento e são usados para personalizar as promoções enviadas.</p>
+
+                        <p><strong>Envio de mensagens eletrônicas:</strong> são coletados dados como nome do remetente e destinatário, e-mail, faixa etária, país e CEP para personalizar avisos e promoções.</p>
+
+                        <p><strong>Concursos, sorteios e pesquisas online:</strong> podem ser solicitadas informações variadas, incluindo preferências e opiniões sobre os serviços prestados, para avaliação e melhoria contínua.</p>
+
+                        <p>Após o recebimento, os dados são armazenados em um servidor seguro protegido por firewall. No entanto, nenhuma transmissão de dados pela Internet é 100% segura. {cinema} se esforça para proteger suas informações, mas não pode garantir segurança absoluta na transmissão dos dados.</p>
+
+                        <p><strong>2 - Como sua informação pessoal é utilizada?</strong></p>
+
+                        <p>{cinema} utiliza as informações fornecidas para estudos internos sobre dados demográficos, interesses e comportamento dos usuários. O objetivo é proporcionar uma experiência personalizada e aprimorar produtos e serviços.</p>
+
+                        <p>No programa de notificação de ofertas, apenas {cinema} tem acesso às informações coletadas, e o usuário pode modificar suas preferências a qualquer momento.</p>
+
+                        <p><strong>3 - O que são cookies e como são utilizados?</strong></p>
+
+                        <p>Cookies são pequenas informações enviadas pelo site ao navegador do usuário. Eles são armazenados no dispositivo e permitem personalizar a experiência, rastrear preferências e medir a audiência do site.</p>
+
+                        <p>Os cookies ajudam a reconhecer o usuário ao acessar o site, lembrar suas preferências e melhorar a navegação.</p>
+
+                        <p><strong>4 - Confidencialidade da informação:</strong></p>
+
+                        <p>Os dados pessoais coletados são compartilhados apenas com {cinema}, salvo exceções legais. A empresa não vende nem aluga informações dos usuários e só as compartilha com parceiros comerciais mediante consentimento do usuário.</p>
+
+                        <p><strong>5 - Modificação / atualização da informação:</strong></p>
+
+                        <p>O usuário pode modificar seus dados a qualquer momento. Caso não deseje mais receber promoções, poderá cancelar sua inscrição.</p>
+
+                        <p><strong>6 - Proteção à informação pessoal:</strong></p>
+
+                        <p>Os dados do usuário são protegidos por um identificador pessoal, de conhecimento exclusivo do usuário. Recomendamos não compartilhar senhas e encerrar sessões ao utilizar dispositivos públicos.</p>
+
+                        <p><strong>7 - Confidencialidade dos menores:</strong></p>
+
+                        <p>{cinema} não solicita informações pessoais de menores sem o consentimento dos responsáveis. Crianças devem obter permissão antes de compartilhar dados pessoais online.</p>
+
+                        <p><strong>8 - Aceitação dos termos:</strong></p>
+
+                        <p>O uso dos serviços de {cinema} implica a aceitação dos termos e condições aqui descritos. Caso o usuário não concorde, não deverá fornecer informações pessoais nem utilizar os serviços do site.</p>
+
+                        <p><strong>9 - Princípios mínimos de nossa política de privacidade:</strong></p>
+
+                        <p>{cinema} se compromete a proteger a privacidade dos usuários e garantir a segurança das informações coletadas.</p>
+                    </div>
                 </section>
             </section>         
         </section>
