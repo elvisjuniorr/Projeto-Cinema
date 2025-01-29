@@ -465,6 +465,114 @@
     text-overflow: ellipsis;
 }
 
+.profile_wallet {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    font-family: "poppins";
+    display: none;
+    gap: 1rem;
+}
+
+.profile_wallet button {
+    border: none;
+    cursor: pointer;
+}
+
+.profile_wallet > h3 {
+    font-size: 2rem;
+}
+
+.profile_wallet > section {
+    width: 95%;
+}
+
+.profile_wallet > section > h2 {
+    color: #d48c29;
+    width: 100%;
+    border-bottom: #d48c29 solid 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.profile_wallet > section > section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.style_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.style_card > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    background-color: red;
+}
+
+.profile_help {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    font-family: "poppins";
+    display: flex;
+    gap: 1rem;
+}
+
+.profile_help > h3 {
+    font-size: 2rem;
+}
+
+.profile_help  > section {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile_help  > section > h2 {
+    color: #d48c29;
+    width: 100%;
+    border-bottom: #d48c29 solid 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.doubt_list > section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.doubt_list > section > p {
+    text-align: justify;
+}
+
+.doubt_list > section > p:first-of-type {
+    color: #d48c29;
+}
+
+.contact_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact_list > p {
+    color: #d48c29;
+}
+
+.contact_list > p > span {
+    color: black;
+}
+
 @media (max-width: 500px) {
 
     .profile {

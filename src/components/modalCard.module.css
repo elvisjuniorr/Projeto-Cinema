@@ -1,0 +1,26 @@
+.modalCard {
+    display: flex;
+    flex-direction: column;
+    height: 17.75rem;
+    width: 28.938rem;
+    background-color: #1A1416;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    justify-content: end;
+}
+
+.modalCard > section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+    font-family: "poppins";
+    font-size: 1rem;
+}
+
+.modalCard > section> section {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: white;
+}

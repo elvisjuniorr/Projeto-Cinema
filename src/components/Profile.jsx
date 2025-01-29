@@ -20,6 +20,9 @@ import { MdContactSupport } from "react-icons/md";
 import { BiSolidBook } from "react-icons/bi";
 import { TbMessageReportFilled } from "react-icons/tb";
 import { TbLogout } from "react-icons/tb";
+import { IoMdAddCircle } from "react-icons/io";
+import { FaRegTrashAlt } from "react-icons/fa";
+import ModalCard from './ModalCard';
 
 export function Profile (){
 
@@ -312,8 +315,64 @@ export function Profile (){
                     </section>
                 </section> 
                 <section className={styles.profile_wallet}>
-                    <h2>Histórico</h2>
-                    
+                    <h3>Carteira</h3> 
+                    <section className={styles.add_card}>
+                        <h2>Cadastrar Cartão</h2>
+                        <section>
+                            <img src='src/assets/wallet.svg' alt='Wallet'/>  
+                            <button><IoMdAddCircle style={{color:  "#0066CC", fontSize: "5rem" }}/></button>
+                        </section>
+                    </section>
+                    <section className={styles.credit_card_list}>
+                        <h2>Cartão de Crédito</h2> 
+                        <section className={styles.style_card}>
+                            <ModalCard number="1234 5678 1234 5678" name="Elvis Souza de Oliveira Júnior" cvv="123" cpf="3218368921639" data_venc="12/30" tipo="credito"/>
+                            <button><FaRegTrashAlt style={{color:  "white", fontSize: "3rem" }}/></button>
+                        </section>
+                    </section>
+                    <section className={styles.debit_card_list}>
+                        <h2>Cartão de Débito</h2>
+                        <section className={styles.style_card}>
+                            <ModalCard number="1234 5678 1234 5678" name="Elvis Souza de Oliveira Júnior" cvv="123" cpf="3218368921639" data_venc="12/30" tipo="credito"/>
+                            <button><FaRegTrashAlt style={{color:  "white", fontSize: "3rem" }}/></button>
+                        </section>
+                    </section>
+                </section>
+                <section className={styles.profile_help}>
+                    <h3>Ajuda</h3>
+                    <section className={styles.doubt_list}>
+                        <h2>Dúvidas Frequentes</h2>
+                        <section>
+                            <p>Quais cartões são aceitos no Cinema como forma de pagamento?</p>
+                            <p>Visa, MasterCard, American Express, Hipercard, Diners*, Sodexo* e Elo*.
+                            *verificar qual unidade aceita</p>
+                        </section>
+                        <section>
+                            <p>Quem estipula as datas de lançamento de filmes no Brasil?</p>
+                            <p>As datas de lançamento dos filmes são estipuladas pelas distribuidoras, sendo que pode-se alterar de cidade para cidade. Por tanto, fique atento a nossa programação e próximos lançamentos!
+                            Assim como o lançamento, a legenda e dublagem também fica por conta das distribuidoras.</p>
+                        </section>
+                        <section>
+                            <p>O que define a permanência de um filme em cartaz?</p>
+                            <p>O principal quesito é o resultado do filme e o comportamento do público com relação a ele. Mas também temos outras questões como: número de filmes em cartaz, número de salas no complexo, negociação com as distribuidoras…</p>
+                        </section>
+                        <section>
+                            <p>Posso cancelar ou trocar meu ingresso comprado online?</p>
+                            <p>Uma vez concluída a compra do(s) ingresso(s), o usuário poderá se arrepender da compra, sendo certo que o reembolso do valor(es) do(s) ingresso(s) será (ao) efetuado (s), desde que essa solicitação seja feita pelo usuário em até 7 (sete) dias da data da compra, observado o prazo mínimo de até 24 (vinte e quatro) horas antes do horário do filme. Sendo assim, para compras realizadas próximas do horário do filme, os ingressos só poderão ser cancelados em até 24 (vinte e quatro) horas antes do horário do filme.</p>
+                        </section>
+                        <section>
+                            <p>Porque alguns filmes entram em determinadas unidades e em outras não?</p>
+                            <p>Algumas vezes, por estratégia da distribuidora do filme, não é interessante lançar em determinado complexo ou determinada cidade. Dependemos em um primeiro momento da decisão deles. Aí então entramos em negociação com relação ao número mínimo de sessões e quanto tempo o filme deverá se manter em cartaz, viabilizando ou não o lançamento do filme.</p>
+                        </section>
+                    </section>
+                    <section className={styles.help_contact}>
+                        <h2>Falar com o Suporte</h2>
+                        <section className={styles.contact_list}>
+                            <p>email: <span>suporte@cin.com</span></p>
+                            <p>tel (Região Sul): <span>(21) 98877-6655</span></p>
+                            <p>tel (Demais Regiões): <span>(21) 94433-2211</span></p>
+                        </section>
+                    </section>
                 </section>
             </section>         
         </section>
